@@ -13,7 +13,7 @@ CREATE TABLE Products (
   Manufacturer INTEGER NOT NULL,
   PRIMARY KEY (Code), 
   FOREIGN KEY (Manufacturer) REFERENCES Manufacturers(Code)
-) ENGINE=INNODB;
+) ;
 
 INSERT INTO Manufacturers(Code,Name) VALUES(1,'Sony');
 INSERT INTO Manufacturers(Code,Name) VALUES(2,'Creative Labs');
