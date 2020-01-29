@@ -14,7 +14,7 @@ CREATE TABLE Boxes (
     Warehouse INTEGER NOT NULL,
     PRIMARY KEY (Code),
     FOREIGN KEY (Warehouse) REFERENCES Warehouses(Code)
- ) ENGINE=INNODB;
+ ) ;
  
   INSERT INTO Warehouses(Code,Location,Capacity) VALUES(1,'Chicago',3);
  INSERT INTO Warehouses(Code,Location,Capacity) VALUES(2,'Chicago',4);
