@@ -80,10 +80,10 @@ SELECT Name
 -- (note that there could be two providers who supply the same piece at the most expensive price).
 
 -- WRONG solution given by XD-DENG. 
-select a.name, a.code, b.price, c.Name
-from Pieces a join Provides b
+select a.name, a.code, MAX(b.price), c.Name
+from Pieces a INNER join Provides b
 on a.Code = b.Piece
-join Providers c
+INNER join Providers c
 on b.provider = c.Code
 group by a.code;
 -- this is wrong since when I group by a.code, SQL will automatically select the first c.Name in each group to return,
